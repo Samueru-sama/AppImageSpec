@@ -145,7 +145,7 @@ An [AppImage] which conforms to the type 3 image format:
 * **MUST** be a valid [STATIC](https://en.wikipedia.org/wiki/Static_build)-[PIE](https://en.wikipedia.org/wiki/Position-independent_code) [ELF](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format) executable 
 * **MUST** have appended to it a filesystem that the ELF part can mount
 * **MUST** be able to use FUSE and mount namespaces to mount the filesystem. **SHOULD** also automatically fallback to extracting and running the filesystem with post cleanup if the FUSE and mount namespaces are not available in the target system
-* **MUST** mount the filesystem at the location specific in the `TMPDIR` and if the enviroment varialbe is NOT set, use `/tmo`. The mountpoint **SHOULD** be a unique hash of the AppImage and not random every time.
+* **MUST** mount the filesystem at the location specific in the `TMPDIR` and if the enviroment varialbe is NOT set, use `/tmp`. The mountpoint **SHOULD** be a unique hash of the AppImage and not random every time.
 * **MUST** set the following enviroment variables:
     * `APPIMAGE` Which points to the location of the AppImage with symlinks followed
     * `ARG0` Which points to the location of the AppImage without following symlinks
